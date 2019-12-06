@@ -1,0 +1,11 @@
+<html>
+<body>
+<form action="{% url 'email' %}" method="post">
+    {% csrf_token %}
+email
+<input type="email" name="email" required>
+{#<input type="password" name="confirmpassword" required>#}
+<button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+<body>
+<form action="{% url 'otp' %}" method="post">
+    {% csrf_token %}
+    <input type="number" required name="otp">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<html>
+<body>
+{% include 'head.html' %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Wellcome Movies Hub</h1>
+    <p class="lead">Feel This Movies.</p>
+          <p class="lead">Thanks for Visiting.</p>
+  </div>
+
+<tr><form action="{% url 'topic'%}" method="post">
+     {% csrf_token %}
+
+<table align="center" border="2">
+    <tr>
+        <td>          <p class="lead">Enter Your Details.</p>
+        </td>
+        </tr>
+    <tr>
+
+        <td><input type="text" placeholder="name" name="name" required></td>
+    </tr>
+        <tr>
+        <td><input type="email" placeholder="email" name="email" required></td>
+    </tr>
+        <tr>
+        <td><input type="tel" placeholder="phone" name="phone" required></td>
+    </tr>
+        <tr>
+        <td><input type="number" placeholder="seats" name="seats" min="1" max="3" required></td>
+    </tr>
+    <tr>
+        <td>
+            <button type="submit">Submit</button>
+        </td>
+    </tr>
+
+    </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% include 'head.html' %}
+<div class="alert alert-primary" role="alert">
+Login Page
+</div>
+{% for i in messages %}
+    {{ i }}
+{% endfor %}
+
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    email
+{{ form.email }}
+    password
+{{ form.password }}
+
+    <button type="submit">Login</button>
+</form>
+
+<a href="{% url 'reset' %}">forgotten password</a><br><br>

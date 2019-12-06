@@ -1,0 +1,41 @@
+{% load staticfiles %}
+
+<html>
+<body>
+{% include 'head.html' %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Wellcome Movies Hub</h1>
+    <p class="lead">Feel This Movies.</p>
+<div class="alert alert-primary" role="alert">
+<table align="center" border="0">
+ <tr>
+     <th>
+         <img src="{% static 'images/ala vikuntapuramlo.jpg' %}" width="250" height="250" class="d-block w-50" alt="..."></th>
+     <th><form action="{% url 'details' %}"><button type="submit" style="width:250px;height: 50px;background:orange;border-radius: 15px;box-shadow: black;">Book</button></form>
+     </th>
+ </tr>
+     <tr>
+     <th>
+      <img src="{% static 'images/movie_17091_sarileru-neekevvaru-photos-images-66014.jpg' %}"  width="250" height="250" class="d-block w-50" alt="..."></th>
+        <th><button type="submit" style="width:250px;height: 50px;background:orange;border-radius: 15px;box-shadow: black;">Book</button>
+
+     </th>
+
+ </tr>
+         <tr>
+     <th>
+         <img src="{% static 'images/salman-khan-dabangg-5.jpg' %}"  width="250" height="250" class="d-block w-50" alt="..."></th><th>
+                <button type="submit" style="width:250px;height: 50px;background:orange;border-radius: 15px;box-shadow: black;">Book</button>
+     </th>
+ </tr>
+
+</table>
+
+
+</div>
+
+{{ message }}
+
+</body>
+</html>
